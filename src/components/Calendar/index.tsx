@@ -29,6 +29,7 @@ const Calendar = ({initialDate = new Date()}: Props) => {
         selectedDay
     } = useManageCalendar(initialDate)
     const {data, isLoading, error} = useCalendarData();
+    console.log('data', data)
     const arrMonthWithReminds = useMemo(() =>
         mergeCalendarWithReminders(arrMonth, data), [arrMonth, data]);
     const arrWeekWithReminds = useMemo(() =>
