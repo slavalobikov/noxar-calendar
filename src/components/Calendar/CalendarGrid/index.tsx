@@ -14,9 +14,10 @@ type Props = {
     isWeekView: boolean;
     toggleCalendarView: () => void;
     setSelectedDay: (v: number | null) => void;
+    selectedDay: number | null;
 }
 
-const CalendarGrid = ({data, isWeekView, toggleCalendarView, setSelectedDay}: Props) => {
+const CalendarGrid = ({data, isWeekView, toggleCalendarView, setSelectedDay, selectedDay}: Props) => {
     return (
         <>
             <div className="calendarGrid">
@@ -25,11 +26,12 @@ const CalendarGrid = ({data, isWeekView, toggleCalendarView, setSelectedDay}: Pr
                 ))}
             </div>
             <div className="calendarGrid">
-                {data.map(({day, isCurrentMonth, reminders, date}, index) =>  (
-                    <div onClick={() => setSelectedDay(index)} aria-label={`Посмотреть события ${day}`} tabIndex={0} role="button" key={index}
-                         className={cn("day", {"notCurrentDay": !isCurrentMonth})}>
-                        <div className={cn({ "todayDay": getIsTodayDate(date)})}>
-                        {day}
+                {data.map(({day, isCurrentMonth, reminders, date}, index) => (
+                    <div onClick={() => setSelectedDay(index)} aria-label={`Посмотреть события ${day}`} tabIndex={0}
+                         role="button" key={index}
+                         className={cn("day", {"notCurrentDay": !isCurrentMonth, "selectedDay": selectedDay === index})}>
+                        <div className={cn({"todayDay": getIsTodayDate(date)})}>
+                            {day}
                         </div>
                         {!!reminders?.length && <div
                             // max-width for cases when length > 8 in css
@@ -46,8 +48,10 @@ const CalendarGrid = ({data, isWeekView, toggleCalendarView, setSelectedDay}: Pr
                         ? 'Включить отоброжения календарря по месяцу'
                         : 'Включить отображение календаря по неделе'}
                 >
-                    <img className={cn("arrowManageCalendar",{"arrowCollapse": isWeekView, "arrowExpand": !isWeekView})} src={arrowIcon}
-                         alt="arrow"/>
+                    <img
+                        className={cn("arrowManageCalendar", {"arrowCollapse": isWeekView, "arrowExpand": !isWeekView})}
+                        src={arrowIcon}
+                        alt="arrow"/>
                 </button>
             </div>
         </>

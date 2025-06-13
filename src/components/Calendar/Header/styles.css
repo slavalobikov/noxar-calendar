@@ -2,9 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*
-    padding: 10px 5vw;
-    */
     padding: 10px clamp(0px, 5vw, 33px);
 }
 
@@ -51,7 +48,7 @@
     justify-content: center;
 }
 
-.headerNavigate:hover {
+.headerNavigate:hover, .todayBtn:hover {
     background: var(--primaryHoverBackground);
 }
 
@@ -64,3 +61,4 @@
     background: var(--primaryBackground);
     padding: 8px 10px;
 }
+

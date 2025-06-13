@@ -53,6 +53,7 @@ const Calendar = ({initialDate = new Date()}: Props) => {
                     isWeekView={isWeekView}
                     toggleCalendarView={toggleCalendarView}
                     setSelectedDay={setSelectedDay}
+                    selectedDay={selectedDay}
                 />
             </div>
             {selectedDay !== null && <Reminds

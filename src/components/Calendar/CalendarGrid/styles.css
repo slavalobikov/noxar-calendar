@@ -11,6 +11,8 @@
     letter-spacing: -0.04em;
     font-size: 13px;
     color: var(--fontColorPrimary);
+    margin-bottom: 3px;
+    text-transform: lowercase;
 }
 
 .day {
@@ -79,4 +81,9 @@
     padding: 5px 10px;
     background: var(--activeColor);
     border-radius: 20px;
+}
+
+.selectedDay {
+    outline: solid 1px var(--activeColor);
+    border-radius: 50px;
 }
