@@ -1,0 +1,73 @@
+.remindH2 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    color: var(--fontColorPrimary);
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+}
+
+.remindWrapper {
+    padding: 0 10px;
+}
+
+.remind {
+    background: var(--primaryBackground);
+    border-radius: 10px;
+    padding: 10px 15px 10px 30px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.remindTitle {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -0.03em;
+}
+
+.titleWithTimer {
+    margin-top: 30px;
+}
+
+.remindLeftIcon {
+    position: absolute;
+    left: 15px;
+    height: 28px;
+    bottom: 10px;
+    width: 3px;
+    background: var(--activeColor);
+    border-radius: 3px;
+}
+
+.remindClock {
+    color: var(--noEventColor);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: -0.03em;
+}
+
+.emptyRemind {
+    margin-left: 15px;
+    color: var(--noEventColor);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.remindTimer {
+    background: var(--background);
+    color: var(--fontColorPrimary);
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -0.03em;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    right: 15px;
+    text-align: center;
+}
+

@@ -1,0 +1,20 @@
+:root {
+  --background: #F4F4F4;
+  --primaryBackground: #FFF;
+  --primaryHoverBackground: #FAFAFA;
+  --secondaryGray: #F7F7F7;
+  --fontColorPrimary: #212121;
+  --notCurrentColor: #A5A5A5;
+  --activeColor: #5945FE;
+  --noEventColor: #7D7D7D;
+}
+
+.app {
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 25px;
+  background: var(--background);
+  min-height: 100vh;
+}

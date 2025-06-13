@@ -1,0 +1,10 @@
+.wrapper {
+    max-width: 600px;
+    width: 100%;
+}
+
+.calendarMainWrapper {
+    background: var(--primaryBackground);
+    border-radius: 20px;
+    margin-top: 23px;
+}
