@@ -31,16 +31,16 @@ const Header = ({currentDate, clickPrev, isWeekView, clickToday, clickNext}: Pro
                     } className="headerNavigate">
                         <img src={arrowIcon} alt="arrow"/>
                     </button>
-                    <button aria-label={isWeekView
-                        ? 'Посмотреть текущую неделю'
-                        : 'Посмотреть текущий месяц'} onClick={clickToday} className="todayBtn">Сегодня
-                    </button>
                     <button onClick={clickNext} aria-label={
                         isWeekView
                             ? 'Посмотреть следующую неделю'
                             : 'Посмотреть слудующий месяц'
                     } className="headerNavigate">
                         <img className="rightNavigateIcon" src={arrowIcon} alt="arrow"/>
+                    </button>
+                    <button aria-label={isWeekView
+                        ? 'Посмотреть текущую неделю'
+                        : 'Посмотреть текущий месяц'} onClick={clickToday} className="todayBtn">Сегодня
                     </button>
                 </div>
             </div>
